@@ -18,6 +18,8 @@
   <meta name="if:Enable Plus1 Button" content="0" />
   <meta name="if:Enable Pocket Button" content="1" />
   <meta name="if:Enable Syntax Highlight" content="0" />
+  <meta name="select:Layout" content="one-column" title="One Column">
+  <meta name="select:Layout" content="two-column" title="Two Column">
 
   <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 
@@ -35,7 +37,9 @@
   
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+
 
 
 
@@ -471,7 +475,7 @@
         background:#eee
     }
     html,body{
-        font-family:'Merriweather','Georgia', serif;
+        font-family:'Roboto', 'Arial', sans-serif;
         background:#fff;
         color:#4f5759;
         -webkit-font-smoothing:antialiased
@@ -486,7 +490,7 @@
     h1,h2,h3,h4,h5,h6{
         color:#222
     }
-    h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{
+    h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{
         color:#222;
         text-decoration:none
     }
@@ -553,7 +557,7 @@
         background-repeat:no-repeat
     }
     #container{
-        width:55%;
+        width:60%;
         margin-left:auto;
         margin-right:auto
     }
@@ -573,7 +577,7 @@
     .blog-title{
         float:left;
         display:inline-block;
-        font-size:120%;
+        font-size:130%;
         padding-bottom:.2em;
         letter-spacing:.2em;
         margin:10px 0;
@@ -604,7 +608,7 @@
     }
     .nav{
         margin:10px 0;
-        font-size:85%;
+        font-size:130%;
         text-transform:uppercase;
         float:right;
         position:relative
@@ -654,9 +658,6 @@
     .search-form.active{
         display:block
     }
-    #main{
-        padding-left:200px
-    }
     .post{
         margin-bottom:5em;
         position:relative
@@ -669,11 +670,10 @@
         margin:0
     }
     .entry-meta-header{
-        position:absolute;
+        position:static;
         top:.5em;
         left:-200px;
         width:180px;
-        font-size:85%
     }
     .entry-meta-header a{
         color:#4f5759
@@ -687,7 +687,9 @@
     }
     .entry-meta-header .date{
         font-weight:bold;
-        font-size:120%
+        font-size:130%;
+        line-height:1.6
+        
     }
     .entry-meta-header .date a{
         color:#222
@@ -696,14 +698,15 @@
         color:#33a6b8
     }
     .entry-content{
-        font-size:120%;
-        line-height:1.7;
+        font-size:130%;
+        line-height:1.6;
         margin-bottom:2em
     }
     .entry-content p{
         margin:0 0 1em 0
     }
     .entry-content img,.entry-content video{
+
         max-width:100%;
         height:auto
     }
@@ -715,22 +718,22 @@
         line-height:1.5
     }
     .entry-content h1{
-        font-size:170%
+        font-size:180%
     }
     .entry-content h2{
-        font-size:160%
+        font-size:170%
     }
     .entry-content h3{
-        font-size:140%
+        font-size:150%
     }
     .entry-content h4{
-        font-size:130%
+        font-size:140%
     }
     .entry-content h5{
-        font-size:110%
+        font-size:120%
     }
     .entry-content h6{
-        font-size:100%
+        font-size:110%
     }
     .entry-content ul,.entry-content ol,.entry-content dd{
         margin:0 0 1em 1.5em;
@@ -1223,9 +1226,9 @@
     #footer .install-button .btn:hover{
         color:#2a8998 !important
     }
-    @media (min-width:768px) and (max-width:1040px){
+    @media (min-width:768px) and (max-width:1300px){
         #container{
-            width:700px
+            width:55%
     }
         #main{
             padding-left:0
@@ -1250,6 +1253,8 @@
             word-wrap:break-word;
             word-break:break-all;
             overflow-x:hidden
+    } .post .entry-content iframe{
+            width:100% !important
     }
     }
     @media (max-width:767px){
@@ -1313,13 +1318,9 @@
     }
         #header{
             margin:2em 0 4em 0;
-            text-align:center
-    }
+            text-align:center;
         .blog-title{
             float:none
-    }
-        #main{
-            padding-left:0
     }
         .entry-meta-header{
             position:static;
